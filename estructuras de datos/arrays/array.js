@@ -6,6 +6,9 @@ let frutas2 = ["pera", "caña", "fresa", "datil"];
 // para acceder a l a ultima posicion de nuestro arreglo se usa formula
 console.log(frutas[frutas.length - 1]);
 
+// en lugar de corchetes con at puede poner numeros negativos
+console.log(frutas.at(-2));
+
 //console.log(1 === "1");
 
 // agrega un elemento al final del array
@@ -40,3 +43,14 @@ console.log(allFrutas);
 // el metodo sort ordena el arreglos alfabeticamente
 allFrutas.sort();
 console.log(allFrutas);
+
+allFrutas.splice(2, 0, "papaya");
+console.log(allFrutas);
+
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+console.log("-------");
+for (let i = frutas.length - 1; i >= 0; i--) {
+  console.log(frutas[i]);
+}
