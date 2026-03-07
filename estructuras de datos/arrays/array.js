@@ -54,3 +54,68 @@ console.log("-------");
 for (let i = frutas.length - 1; i >= 0; i--) {
   console.log(frutas[i]);
 }
+
+// el metodo indexOf te ayuda a saber si existe o no el elemento del arreglo a buscar
+// compara del modo estricto, compara tanto el valor como el tipo de dato
+console.log(allFrutas.indexOf("datil"));
+
+// metodo fill
+allFrutas.fill("durazno", 4, 6);
+
+/*para crear una copia de arreglo se usa el operador ... */
+
+/*en js es una funcion de primer orden es una funcion que se puede mandar por parametro */
+
+let fn = () => console.log("esto es una funcion de primer orden");
+
+function algo(m) {
+  console.log("hola");
+  m();
+  console.log("mundo");
+}
+
+algo(fn);
+
+// arreglo de objetos
+
+let paises = [
+  {
+    nombre: "mexico",
+    poblacion: 130,
+    capital: "cdmx",
+  },
+  {
+    nombre: "india",
+    poblacion: 1400,
+    capital: "nueva dheli",
+  },
+  {
+    nombre: "españa",
+    poblacion: 55,
+    capital: "madrid",
+  },
+];
+
+// every evalua todos los elementos del arreglo y regresa un booleano
+// con un elemento de la condicion que no se cumpla regresara un false
+
+/*let pais = (e) => e.poblacion < 60;
+console.log(paises.every(pais));*/
+
+// en cambio some regresara un true con que un elemento del arreglo cumpla con la condicion
+
+/*let country = (e) => e.poblacion < 60;
+console.log(paises.some(country));*/
+
+// map (es metodo inmutable)
+
+const paises2 = paises.map((element) => {
+  return {
+    nombre: element.nombre,
+    poblacion: element.poblacion * 2,
+    capital: element.capital,
+  };
+});
+
+console.log(paises2);
+console.log(paises);
